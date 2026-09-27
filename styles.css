@@ -893,6 +893,11 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
 }
 
+@media (max-width: 760px) {
+  .dates-layout { grid-template-columns: 1fr; }
+  .info-card-panel { max-width: none; }
+}
+
 @media (max-width: 980px) {
   .main-nav { display: none; }
   .organizer-list { --org-cols: 2; }
