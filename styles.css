@@ -242,6 +242,58 @@ img { max-width: 100%; display: block; }
   color: var(--soft);
 }
 
+/* large quotation marks around the central question */
+.research-question {
+  text-align: center;
+}
+
+#overview .research-question p {
+  position: relative;
+  padding: 0 2.9rem;
+}
+
+.research-question p::before,
+.research-question p::after {
+  position: absolute;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.55;
+}
+
+.research-question p::before {
+  content: "\201C";
+  left: 0;
+  top: -0.12em;
+}
+
+.research-question p::after {
+  content: "\201D";
+  right: 0;
+  top: -0.12em;
+}
+
+@media (max-width: 560px) {
+  #overview .research-question p {
+    padding: 0 2.1rem;
+  }
+
+  .research-question p::before,
+  .research-question p::after {
+    font-size: 3.4rem;
+  }
+}
+
+/* desktop-only line break before "affected" in the central question */
+@media (max-width: 900px) {
+  .rq-break {
+    display: none;
+  }
+}
+
 /* About: expected outcomes cards */
 .about-outcomes {
   margin-top: 34px;
