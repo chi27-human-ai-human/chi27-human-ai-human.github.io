@@ -528,6 +528,12 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
 }
 
+.time-sep {
+  margin: 0 0.15em;
+  font-weight: 300;
+  color: rgba(17, 24, 39, 0.3);
+}
+
 .last-item .timeline-line {
   display: none;
 }
