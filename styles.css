@@ -437,6 +437,29 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 14px 28px rgba(239, 127, 164, 0.22);
 }
 
+.form-button {
+  gap: 0.5rem;
+}
+
+.form-button-row {
+  margin-top: 8px;
+}
+
+.form-button-arrow {
+  width: 1.1em;
+  height: 1.1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
+}
+
+.form-button:hover .form-button-arrow {
+  transform: translateX(3px);
+}
+
 .activities-section {
   margin-top: 28px;
 }
