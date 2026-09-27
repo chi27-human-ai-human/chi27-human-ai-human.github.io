@@ -450,8 +450,12 @@ img { max-width: 100%; display: block; }
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100%;
+  /* match h3 font-size so the dot lines up with the heading's first line */
+  font-size: clamp(1.08rem, 1.45vw, 1.45rem);
+  /* content top padding (8px) + half of h3 line box (1.3em / 2) - half dot (6px) */
+  padding-top: calc(8px + 0.65em - 6px);
 }
 
 .timeline-line {
@@ -563,7 +567,7 @@ img { max-width: 100%; display: block; }
 }
 
 #team {
-  margin-top: 28px;
+  margin-top: 72px;
   padding: 28px 26px 18px;
   border: 1px solid rgba(239, 127, 164, 0.18);
   border-radius: 28px;
@@ -572,13 +576,17 @@ img { max-width: 100%; display: block; }
 }
 
 .organizer-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  --org-cols: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 22px;
   margin-top: 24px;
 }
 
 .organizer-item {
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - (var(--org-cols) - 1) * 22px) / var(--org-cols));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -731,7 +739,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 980px) {
   .main-nav { display: none; }
-  .organizer-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .organizer-list { --org-cols: 2; }
   .logo-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .submission-row { grid-template-columns: 1fr; }
 }
@@ -741,7 +749,7 @@ img { max-width: 100%; display: block; }
     width: min(100% - 22px, 1060px);
   }
 
-  .organizer-list { grid-template-columns: 1fr; }
+  .organizer-list { --org-cols: 1; }
   .logo-strip { grid-template-columns: 1fr; }
   .logo-item { justify-content: flex-start; }
   .footer {
