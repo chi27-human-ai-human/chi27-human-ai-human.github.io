@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From Human-AI to Human-AI-Human</title>
+    <meta name="description" content="Workshop on designing AI for users and affected others." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f5efe8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='38'%3E🤖%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell" id="top">
+      <header class="topbar">
+        <a class="brand-wrap" href="#top" aria-label="Back to top">
+          <div class="brand-mark">✦</div>
+          <span class="brand-text">CHI 2027 Workshop</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#overview">Overview</a>
+          <a href="#dates">Important Dates</a>
+          <a href="#cfp">Call for Participation</a>
+          <a href="#activities">Workshop Activities</a>
+          <a href="#team">Organizers</a>
+        </nav>
+
+        <a class="nav-button" href="https://forms.gle/64aDKgznTtzQQNy68" target="_blank" rel="noreferrer">Join Us</a>
+      </header>
+
+      <main class="landing-page">
+        <section class="masthead">
+          <!-- <p class="eyebrow">HEARTS @ CHI 2027</p> -->
+          <h1>
+            <span class="gradient-text">From Human-AI</span>
+            <span class="separator">to</span>
+            <span class="highlight-text">Human-AI-Human</span>
+          </h1>
+          <p class="subtitle">Designing AI for Users and the People Affected by Their Use</p>
+          <p class="meta">Pittsburgh, PA, USA | May 10–14, 2027 | One-Day, In Person</p>
+        </section>
+
+        <!-- <section id="submissions" class="content-section">
+          <h2>Accepted Submissions</h2>
+          <p class="section-note">Our workshop is open door! All CHI 2027 attendees are welcome to join for both or one of our sessions.</p>
+
+          <div class="submission-list">
+            <article class="submission-row">
+              <div class="submission-type">Position Paper</div>
+              <div class="submission-copy">
+                <h3>Bringing Human Values into AI Decision Support</h3>
+                <p>Jini Kim (CHI 2027 Workshop)</p>
+              </div>
+            </article>
+
+            <article class="submission-row">
+              <div class="submission-type">Concurrent Submission</div>
+              <div class="submission-copy">
+                <h3>Scaling Human-Centered AI Red Teaming</h3>
+                <p>Feifei Han, Jane L. E. (National University of Singapore)</p>
+              </div>
+            </article>
+          </div>
+        </section> -->
+
+        <section id="overview" class="content-section">
+          <h2>About the Workshop</h2>
+          <p>
+            Generative AI (GenAI) increasingly shapes decisions, actions, and outputs that affect people beyond those
+            who directly interact with it. Yet AI that serves a direct user’s goals may not account for the needs,
+            contexts, and relationships of those who ultimately experience its consequences, potentially affecting their
+            experiences, well-being, and relationships.
+          </p>
+          <p>
+            Moving beyond a focus on direct Human–AI interaction, this workshop advances a Human–AI–Human perspective,
+            asking how AI can support users in accounting for the people affected by their GenAI use. Bringing together
+            researchers and practitioners from academia, industry, and nonprofits, we aim to develop (1) a cross-domain
+            collection of cases and challenges documenting how direct users’ GenAI use affects others and the open
+            questions these cases raise, and (2) research and design directions for developing and evaluating AI
+            interactions, interventions, and broader organizational and community support. More broadly, we aim to
+            build a community interested in advancing this research space.
+          </p>
+        </section>
+
+        <section id="dates" class="content-section dates-section">
+          <h2>Important Dates</h2>
+          <div class="dates-layout">
+            <div class="info-card-panel">
+              <ul class="date-list">
+                <li><span class="dot"></span> Position Paper Submission: <strong>TBD</strong></li>
+                <li><span class="dot"></span> Notification: <strong>TBD</strong></li>
+                <li><span class="dot"></span> Workshop Date: <strong>TBD (CHI 2027)</strong></li>
+              </ul>
+            </div>
+
+            <aside class="countdown-panel" aria-live="polite">
+              <div class="countdown-label">Time left</div>
+              <div class="countdown-grid">
+                <div class="time-box">
+                  <span id="countdown-days">00</span>
+                  <small>Days</small>
+                </div>
+                <div class="time-box">
+                  <span id="countdown-hours">00</span>
+                  <small>Hours</small>
+                </div>
+                <div class="time-box">
+                  <span id="countdown-minutes">00</span>
+                  <small>Minutes</small>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="cfp" class="content-section cfp-section">
+          <h2>Call for Participation</h2>
+
+          <div class="cfp-block">
+            <p class="cfp-intro">
+              GenAI increasingly shapes decisions, actions, and outputs that affect not only direct users but also others
+              who experience the consequences of its use. This CHI workshop explores new research and design opportunities
+              from a <em>Human–AI–Human</em> perspective, considering the people and relationships affected by GenAI use.
+              Through small-group discussions and collaborative design activities, participants will map cases and challenges
+              across domains and identify future directions for AI interactions and interventions, as well as broader
+              organizational and community support. We welcome researchers, designers, practitioners, and community
+              partners from academia, industry, nonprofits, and other sectors interested in advancing this emerging
+              research space.
+            </p>
+          </div>
+
+          <div class="cfp-submission">
+            <div class="submission-link-row">
+              <p>
+                <strong>Submission Requirements:</strong> Please submit one of the following through our workshop website:
+              </p>
+              <a class="form-button" href="https://forms.gle/64aDKgznTtzQQNy68" target="_blank" rel="noreferrer">
+                Submit via Google Form
+              </a>
+            </div>
+            <ul class="participation-list">
+              <li><strong>Position Paper (1–3 pages):</strong> Using the ACM Master Article Format, present a relevant case,
+                interaction or intervention, research approach, key tension, or open question.</li>
+              <li><strong>Statement of Interest (1–2 pages):</strong> Describe your motivation, relevant research, practice,
+                community, or lived experience, and expected contribution to the workshop.</li>
+              <li><strong>Concurrent Submission:</strong> Submit relevant work currently under review, accepted, or recently
+                published elsewhere, with a brief statement describing its relevance to the workshop and your motivation for
+                participating.</li>
+            </ul>
+            <p class="final-copy">
+              Submissions will be selected based on relevance and potential contribution while seeking diversity across
+              backgrounds, domains, methods, and perspectives. We expect approximately 30 participants. At least one
+              author of each accepted submission and one workshop organizer must attend. With authors’ permission,
+              accepted position papers will be published on the workshop website and in CEUR-WS proceedings.
+            </p>
+          </div>
+        </section>
+
+        <section id="activities" class="content-section activities-section">
+          <h2>Workshop Activities</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <span class="timeline-line"></span>
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-content">
+                <h3>Introduction &amp; Framing — 20 min</h3>
+                <p>
+                  Welcome, participant introductions, and a brief overview of the workshop goals, key concepts, and
+                  activities.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <span class="timeline-line"></span>
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-content">
+                <h3>Activity 1: Mapping the Problem Space — 40 min</h3>
+                <p>
+                  In small groups, participants will use a <strong>shared mapping template</strong> to unpack cases where
+                  GenAI use affects others—mapping direct users, affected others, their relationships, potential impacts
+                  and challenges, and open research questions. Groups will compare their cases to identify recurring and
+                  context-specific challenges.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <span class="timeline-line"></span>
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-content">
+                <h3>Break — 20 min</h3>
+                <p>Informal networking and continued conversation.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <span class="timeline-line"></span>
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-content">
+                <h3>Activity 2: Exploring Interaction &amp; Research Opportunities — 50 min</h3>
+                <p>
+                  Building on their case maps, groups will <strong>sketch interaction concepts and interventions</strong>
+                  that could help direct users account for affected others, enable affected others to participate or
+                  contest AI use, or mediate among multiple parties. Groups will then discuss how these concepts could be
+                  evaluated and identify key tensions and open research questions.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <span class="timeline-line"></span>
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-content">
+                <h3>Activity 3: Looking Beyond the Interface — 40 min</h3>
+                <p>
+                  Groups will revisit cases where their interaction concepts may <strong>not be enough</strong> and identify
+                  why—such as limits in representation, authority, or opportunities for contestation. They will then
+                  <strong>map organizational and community structures</strong> that could address these gaps, including
+                  participation processes, feedback channels, shared practices, and mechanisms for distributing
+                  responsibility.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item last-item">
+              <div class="timeline-marker-wrap">
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-content">
+                <h3>Closing — 10 min</h3>
+                <p>
+                  Groups will share key takeaways, and we will synthesize emerging research and design directions and
+                  discuss opportunities for continued collaboration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="team" class="content-section">
+          <h2>Organizers</h2>
+          <div class="organizer-list">
+            <div class="organizer-item">
+              <div class="organizer-avatar-wrap">
+                <img
+                  src="https://www.hcii.cmu.edu/sites/default/files/styles/person_portrait_image/public/2026-09/Jini-Kim.jpg.webp?h=1160569d&itok=I-Fd6KXX"
+                  alt="Jini Kim portrait"
+                  class="organizer-avatar"
+                />
+              </div>
+              <h3>Jini Kim</h3>
+              <p class="organizer-role">
+                Ph.D. student in the Human–Computer Interaction Institute at Carnegie Mellon University
+              </p>
+            </div>
+            <div class="organizer-item">
+              <div class="organizer-avatar-wrap">
+                <img
+                  src="https://designandwellbeing.com/images/anja_webpage3.jpg"
+                  alt="Anja Thieme portrait"
+                  class="organizer-avatar"
+                />
+              </div>
+              <h3>Anja Thieme</h3>
+              <p class="organizer-role">
+                Principal Researcher in Human-Centred AI at Microsoft Research
+              </p>
+            </div>
+            <div class="organizer-item">
+              <div class="organizer-avatar-wrap">
+                <img
+                  src="https://lauravardoulakis.github.io/LV.jpg"
+                  alt="Laura Vardoulakis portrait"
+                  class="organizer-avatar"
+                />
+              </div>
+              <h3>Laura Vardoulakis</h3>
+              <p class="organizer-role">
+                User Experience Research Lead at Google Research
+              </p>
+            </div>
+            <div class="organizer-item">
+              <div class="organizer-avatar-wrap">
+                <img
+                  src="https://www.hcii.cmu.edu/sites/default/files/styles/person_portrait_image/public/migrated_files/jodi_lores_scs.jpg.webp?h=0f09c2f2&itok=Pg5GLamN"
+                  alt="Jodi Forlizzi portrait"
+                  class="organizer-avatar"
+                />
+              </div>
+              <h3>Jodi Forlizzi</h3>
+              <p class="organizer-role">
+                The Herbert A. Simon Professor at Carnegie Mellon University’s Human-Computer Interaction Institute
+              </p>
+            </div>
+            <div class="organizer-item">
+              <div class="organizer-avatar-wrap">
+                <img
+                  src="https://www.hcii.cmu.edu/sites/default/files/styles/person_portrait_image/public/images/person/hong-shen.jpeg.webp?h=b1093da3&itok=hnGqxFiA"
+                  alt="Hong Shen portrait"
+                  class="organizer-avatar"
+                />
+              </div>
+              <h3>Hong Shen</h3>
+              <p class="organizer-role">
+                Assistant Professor at Carnegie Mellon University’s Human-Computer Interaction Institute
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="logo-strip" aria-label="Institutional logos">
+        <img
+          class="footer-logo combined-logo"
+          src="./assets/logos.png"
+          alt="Workshop institutional logos"
+        />
+      </div>
+
+      <footer class="footer">
+        <span>From Human-AI to Human-AI-Human</span>
+        <span>CHI 2027 Workshop</span>
+      </footer>
+    </div>
+
+    <script>
+      const countdownEls = {
+        days: document.getElementById('countdown-days'),
+        hours: document.getElementById('countdown-hours'),
+        minutes: document.getElementById('countdown-minutes')
+      };
+
+      function updateCountdown() {
+        countdownEls.days.textContent = '00';
+        countdownEls.hours.textContent = '00';
+        countdownEls.minutes.textContent = '00';
+      }
+
+      updateCountdown();
+    </script>
+  </body>
+</html>
