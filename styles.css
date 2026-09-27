@@ -153,7 +153,8 @@ img { max-width: 100%; display: block; }
 
 .subtitle {
   margin: 22px 0 0;
-  font-size: clamp(1.55rem, 2.2vw, 2.45rem);
+  /* capped so the subtitle stays on one line within the 1060px shell */
+  font-size: clamp(1.55rem, 2.2vw, 2.25rem);
   line-height: 1.2;
   letter-spacing: -0.04em;
   color: var(--soft);
