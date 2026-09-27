@@ -510,6 +510,24 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
 }
 
+.timeline-session .timeline-content {
+  padding: 0;
+}
+
+.timeline-session:not(:first-child) {
+  padding-top: 14px;
+}
+
+.timeline-session h4 {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 .last-item .timeline-line {
   display: none;
 }
