@@ -198,6 +198,17 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
 }
 
+#overview p {
+  max-width: none;
+}
+
+/* About + Call for Participation body text: ~17px */
+#overview p,
+#cfp p,
+#cfp li {
+  font-size: 1.06rem;
+}
+
 .overview-split {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
