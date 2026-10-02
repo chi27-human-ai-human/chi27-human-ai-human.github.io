@@ -391,9 +391,9 @@ img { max-width: 100%; display: block; }
 
 .dates-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 320px);
-  gap: 24px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: 18px;
+  align-items: stretch;
 }
 
 .part-title {
@@ -409,9 +409,8 @@ img { max-width: 100%; display: block; }
 }
 
 .info-card-panel {
-  max-width: 680px;
   margin-top: 8px;
-  padding: 26px 24px 18px;
+  padding: 8px 26px;
   border: 1px solid rgba(17, 24, 39, 0.08);
   border-radius: 22px;
   background: rgba(255,255,255,0.9);
@@ -419,8 +418,11 @@ img { max-width: 100%; display: block; }
 }
 
 .countdown-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 8px;
-  padding: 22px 20px 18px;
+  padding: 22px 20px 20px;
   border: 1px solid rgba(17, 24, 39, 0.08);
   border-radius: 22px;
   background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,252,0.96));
@@ -429,11 +431,20 @@ img { max-width: 100%; display: block; }
 
 .countdown-label {
   margin-bottom: 18px;
-  color: var(--muted);
-  font-size: 0.72rem;
+  color: var(--soft);
+  font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.countdown-panel .countdown-note {
+  margin: -12px 0 16px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .countdown-grid {
@@ -479,17 +490,39 @@ img { max-width: 100%; display: block; }
 }
 
 .date-list li {
-  position: relative;
-  margin: 0 0 14px;
-  padding-left: 22px;
-  font-size: clamp(calc(0.98rem + 1px), calc(1vw + 1px), calc(1.25rem + 1px));
-  line-height: 1.5;
-  color: var(--text);
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.07);
 }
 
-.date-list strong {
+.date-list li:last-child {
+  border-bottom: none;
+}
+
+.date-label {
+  color: var(--muted);
+  font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.date-value {
+  font-size: calc(1.02rem + 1px);
+  line-height: 1.45;
+  font-weight: 600;
   color: var(--soft);
+}
+
+.date-note {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 .dot {
@@ -1012,9 +1045,20 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
 }
 
+/* "At least one week" / "before the CHI…" split only where the second line fits */
+@media (max-width: 1080px) {
+  .date-break { display: none; }
+}
+
 @media (max-width: 760px) {
   .dates-layout { grid-template-columns: 1fr; }
-  .info-card-panel { max-width: none; }
+}
+
+@media (max-width: 560px) {
+  .date-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
 }
 
 @media (max-width: 980px) {
